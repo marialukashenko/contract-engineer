@@ -42,11 +42,9 @@ section {
 }
 
 .additional-info {
-  display: block; /* не flex */
-  height: auto; /* под размер содержимого */
+  display: block;
+  height: auto;
   padding-bottom: 0;
-  /* контент поверх */
-  /* Адаптивная “ступенчатая” раскладка */
   /* 1 карточка на ряд (малые экраны) */
   /* 2 карточки на ряд (средние экраны) */
   /* 3 карточки на ряд (большие экраны) */
@@ -110,27 +108,8 @@ section {
   inset: 0;
   width: 100%;
   height: 100%;
-  object-fit: contain; /* сохраняет пропорции без обрезки */
+  object-fit: contain; /* сохранение пропорций */
   z-index: 0;
-}
-.additional-info .stats-card__percentage,
-.additional-info .stats-card__description {
-  position: relative;
-  z-index: 1;
-}
-.additional-info .stats-card__percentage {
-  max-width: 100%; /* занимает максимум 90% карточки */
-  font-size: clamp(60px, 60px + 40 * (100% - 280px) / 280, 100px);
-  font-weight: 700;
-  padding-left: 1.8vw;
-  position: absolute;
-  top: 3.5vh;
-  left: 0.3vw;
-  font-weight: 700;
-}
-.additional-info .stats-card__description {
-  font-size: 22px;
-  padding: 0 3.5vw 0 2vw;
 }
 @media (max-width: 630px) {
   .additional-info .stats-card {
@@ -138,7 +117,7 @@ section {
     max-width: 560px;
   }
 }
-@media (min-width: 631px) and (max-width: 1260px) {
+@media (min-width: 636px) and (max-width: 1260px) {
   .additional-info .stats-card {
     flex: 0 1 calc(50% - 7.5px);
     max-width: 560px;
@@ -148,6 +127,134 @@ section {
   .additional-info .stats-card {
     flex-basis: calc(33.333% - 10px);
     max-width: 560px;
+  }
+}
+
+.about-program {
+  display: block;
+  height: auto;
+  padding-bottom: 0;
+  /* 1 карточка на ряд (малые экраны) */
+  /* 2 карточки на ряд (средние экраны) */
+  /* 3 карточки на ряд (большие экраны) */
+}
+.about-program h1 {
+  font-size: 50px;
+  margin: 0;
+}
+@media (max-width: 580px) {
+  .about-program h1 {
+    font-size: 45px;
+  }
+}
+@media (max-width: 460px) {
+  .about-program h1 {
+    font-size: 35px;
+  }
+}
+@media (max-width: 320px) {
+  .about-program h1 {
+    font-size: 30px;
+  }
+}
+.about-program .about-program-container {
+  display: flex;
+  justify-content: left;
+  margin: 0;
+  gap: 4vh;
+  padding: 10vh 5.4vw 0 5.4vw;
+}
+@media (max-width: 1500px) {
+  .about-program .about-program-container {
+    flex-direction: column;
+  }
+}
+.about-program p {
+  margin: 0;
+  font-size: 24px;
+}
+@media (max-width: 1806px) {
+  .about-program p {
+    font-size: 22px;
+  }
+}
+@media (max-width: 1650px) {
+  .about-program p {
+    font-size: 19px;
+  }
+}
+@media (max-width: 700px) {
+  .about-program p {
+    font-size: 17px;
+  }
+}
+.about-program .stats-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding: 4vh 5.4vw 10vh;
+  max-width: 1800px;
+  margin: 0;
+  justify-content: left;
+  width: 90vw;
+}
+.about-program .stats-card {
+  aspect-ratio: 415/330;
+  border-radius: 16px;
+  align-items: left;
+  justify-content: center;
+  text-align: left;
+  min-width: 245px;
+  max-width: 415px;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 245px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.about-program .stats-card--blue {
+  background: #1550E2;
+}
+.about-program .stats-card--purple {
+  background: #8B00F8;
+}
+.about-program .stats-card--light-blue {
+  background: #00C9FD;
+}
+.about-program .stats-card--orange {
+  background: #FF5F00;
+}
+.about-program .stats-card-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* сохранение пропорций */
+  z-index: 0;
+}
+@media (max-width: 630px) {
+  .about-program .stats-card {
+    flex-basis: 100%;
+    max-width: 415px;
+  }
+}
+@media (min-width: 631px) and (max-width: 980px) {
+  .about-program .stats-card {
+    flex: 0 1 calc(50% - 7.5px);
+    max-width: 415px;
+  }
+}
+@media (min-width: 981px) and (max-width: 1421px) {
+  .about-program .stats-card {
+    flex: 0 1 calc(33.333% - 10px);
+    max-width: 415px;
+  }
+}
+@media (min-width: 1422px) {
+  .about-program .stats-card {
+    flex: calc(25% - 10px);
+    max-width: 415px;
   }
 }
 
