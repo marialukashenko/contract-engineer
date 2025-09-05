@@ -258,4 +258,82 @@ section {
   }
 }
 
+.education-stages {
+  display: block;
+  height: auto;
+  padding-bottom: 0;
+  background-color: #E1F2FD;
+}
+.education-stages h1 {
+  font-size: 50px;
+  margin: 0;
+  padding: 10vh 0 0 5.4vw;
+}
+@media (max-width: 580px) {
+  .education-stages h1 {
+    font-size: 45px;
+  }
+}
+@media (max-width: 460px) {
+  .education-stages h1 {
+    font-size: 35px;
+  }
+}
+@media (max-width: 320px) {
+  .education-stages h1 {
+    font-size: 30px;
+  }
+}
+.education-stages .stages-container {
+  padding: 4vh 5.4vw 10vh 5.4vw;
+  display: flex;
+  flex-wrap: wrap; /* разрешаем перенос на новую строку */
+  gap: 20px;
+}
+.education-stages .stage {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+.education-stages .stage-number {
+  font-size: clamp(18px, 2vw, 24px);
+  color: #FFFFFF;
+  flex: 0 0 auto; /* фиксированный размер по содержимому */
+  width: clamp(50px, 8vw, 75px);
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+}
+.education-stages .stage-number--light-blue {
+  background-color: #00C9FD;
+}
+.education-stages .stage-number--blue {
+  background-color: #1550E2;
+}
+.education-stages .stage-number--orange {
+  background-color: #FF5F00;
+}
+.education-stages .stage-number--purple {
+  background-color: #8B00F8;
+}
+.education-stages .stage-description {
+  flex: 1 1 auto;
+  min-height: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1.5vw;
+  font-size: clamp(17px, 1.5vw, 24px);
+  border-radius: 38px;
+  background-color: #fff;
+  padding: 3px 25px;
+  text-align: left; /* текст по центру */
+  white-space: normal; /* разрешаем перенос строк */
+  word-wrap: break-word; /* переносим длинные слова */
+  overflow-wrap: break-word; /* аналогично, современный вариант */
+}
+
 /*# sourceMappingURL=styles.css.map */
