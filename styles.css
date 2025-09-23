@@ -656,6 +656,9 @@ section {
   scrollbar-width: thin;
   scrollbar-color: #ccc transparent;
 }
+.timeline img {
+  padding-left: 5.4vw;
+}
 .timeline .timeline-scroll img {
   position: relative;
   z-index: 1; /* кружки всегда выше линии */
@@ -663,11 +666,12 @@ section {
 .timeline .timeline-scroll::before {
   content: "";
   position: absolute;
-  top: 51.25%; /* по центру блока */
+  top: 51.5%;
   left: 0;
-  width: 100vw; /* 👈 ширина во весь экран */
-  height: 2px;
-  background: white; /* цвет линии */
+  width: 100vw;
+  height: 1px;
+  background: white;
+  opacity: 60%;
   z-index: 0;
 }
 .timeline h1 {
@@ -1189,292 +1193,38 @@ section {
   word-break: break-all;
 }
 
-.abit-form {
+.video {
   background: linear-gradient(to bottom, #E1F2FD 0%, #FFFFFF 100%);
+  width: auto;
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 10vh 5.4vw;
 }
-.abit-form h2 {
-  font-size: clamp(30px, 2vw, 35px);
-  margin-top: 2vh;
-}
-@media (max-width: 1450px) {
-  .abit-form img {
-    display: none;
-  }
-}
-.abit-form .form-container {
-  display: flex;
-  flex-direction: row;
-  gap: 24px;
-  margin: 10vh auto;
-  justify-content: center;
-}
-@media (max-width: 1450px) {
-  .abit-form .form-container {
-    justify-content: center;
-    width: 100%;
-    gap: 0px;
-    flex-direction: column;
-    align-items: center;
-    margin: 10vh auto;
-  }
-  .abit-form .form-container img {
-    display: none;
-  }
-}
-@media (max-width: 700px) {
-  .abit-form .form-container {
-    margin: 10vh auto;
-  }
-}
-.abit-form .form {
-  background-color: white;
-  border-radius: 30px;
-  padding: 52px 100px;
+.video .video-player {
   width: 100%;
-  max-width: 900px;
-  margin: 0;
-  box-sizing: border-box;
   height: auto;
-  min-height: 920px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  border-radius: 8px;
 }
-@media (max-width: 700px) {
-  .abit-form .form {
-    padding: 20px 30px;
-  }
-}
-@media (max-width: 400px) {
-  .abit-form .form {
-    padding: 16px;
-  }
-}
-.abit-form .group {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 24px;
-}
-.abit-form .group-container {
-  display: flex;
-  gap: 24px;
-  max-width: 700px;
-  flex-wrap: wrap;
-}
-.abit-form .group-container--date-edu .group:first-child { /* 25% от общей ширины без гэпа */ }
-@media (min-width: 1026px) {
-  .abit-form .group-container--date-edu .group:first-child {
-    width: 270.4px;
-  }
-}
-.abit-form .group-container--date-edu .group:last-child { /* 75% от общей ширины без гэпа */ }
-@media (min-width: 1026px) {
-  .abit-form .group-container--date-edu .group:last-child {
-    width: 405.6px;
-  }
-}
-.abit-form .group-container--phone-email .group:first-child { /* 25% от общей ширины без гэпа */ }
-@media (min-width: 1026px) {
-  .abit-form .group-container--phone-email .group:first-child {
-    width: 304.2px;
-  }
-}
-.abit-form .group-container--phone-email .group:last-child { /* 75% от общей ширины без гэпа */ }
-@media (min-width: 1026px) {
-  .abit-form .group-container--phone-email .group:last-child {
-    width: 371.8px;
-  }
-}
-@media (max-width: 1025px) {
-  .abit-form .group-container {
-    flex-direction: column;
-    gap: 0px;
-  }
-  .abit-form .group-container--date-edu .group:first-child,
-  .abit-form .group-container--date-edu .group:last-child,
-  .abit-form .group-container--phone-email .group:first-child,
-  .abit-form .group-container--phone-email .group:last-child {
-    display: flex;
-  }
-}
-.abit-form label {
-  font-size: 16px;
-  margin-bottom: 8px;
-}
-.abit-form input,
-.abit-form textarea {
-  border: none;
-  border-radius: 30px;
-  background-color: #F5F5F5;
-  padding: 20px;
-  font-size: clamp(14px, 2vw, 20px);
-  color: #333;
-  resize: none;
-}
-.abit-form input::placeholder,
-.abit-form textarea::placeholder {
-  color: #aaa;
-}
-.abit-form textarea {
-  height: 120px;
-}
-.abit-form small {
-  font-size: clamp(14px, 2vw, 20px);
-  color: #333;
-}
-.abit-form button[type=submit] {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px 15px;
-  background-color: #FF5F00;
-  color: #FFFFFF;
-  border: 3px solid #FFFFFF;
-  border-radius: 30px;
-  font-size: clamp(14px, 2vw, 18px);
-  font-weight: 700;
-}
-.abit-form button[type=submit]:hover {
-  background-color: #FF5F00;
-  transform: translateY(-2px);
-}
-.abit-form button[type=submit]:active {
-  transform: translateY(0);
-}
-.abit-form button[type=submit] .play-icon {
-  margin-right: 10px;
-  font-size: 16px;
-}
-.abit-form button[type=submit]:hover {
-  background-color: #1565C0;
-}
-.abit-form input[type=checkbox] {
-  display: inline-block;
-  vertical-align: middle;
-  margin-right: 8px;
-  cursor: pointer;
-  width: 22px;
-  height: 22px;
-}
-.abit-form label input[type=checkbox]:checked::before {
-  content: "";
-  display: inline-block;
-  width: 18px;
-  height: 18px;
-  border: 2px solid var(--mdc-theme-primary);
-  background-color: var(--mdc-theme-primary);
-  border-radius: 4px;
-  margin-right: 8px;
-}
-.abit-form .file-upload-label {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  background-color: #F5F5F5;
-  border-radius: 30px;
+.video h1 {
+  font-size: 50px;
   margin: 0;
+  padding-bottom: 4vh;
+  color: black;
 }
-.abit-form .file-upload-text {
-  border: none;
-  border-radius: 30px;
-  background-color: #F5F5F5;
-  padding: 20px;
-  font-size: clamp(14px, 2vw, 20px);
-  color: #aaa;
-  resize: none;
-}
-.abit-form .file-upload-button {
-  position: relative;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  background: #FF5F00;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 8px rgba(255, 95, 0, 0.2);
-}
-.abit-form .file-upload-button:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 12px rgba(255, 95, 0, 0.3);
-}
-.abit-form .file-upload-button:active {
-  transform: scale(0.95);
-}
-.abit-form .upload-icon {
-  color: white;
-}
-.abit-form .file-input {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  cursor: pointer;
-}
-.abit-form .file-name {
-  font-size: clamp(14px, 2vw, 20px);
-  color: #aaa;
-  margin-left: auto;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  max-width: 200px;
-  padding-right: 16px;
-}
-.abit-form .file-input:valid + .file-name {
-  color: #FF5F00;
-  font-weight: 500;
-  font-size: clamp(20px, 2vw, 30px);
-}
-@media (max-width: 600px) {
-  .abit-form .file-upload-label {
-    flex-direction: column;
-    text-align: center;
-    gap: 12px;
-  }
-  .abit-form .file-name {
-    margin-left: 0;
-    max-width: 100%;
+@media (max-width: 580px) {
+  .video h1 {
+    font-size: 45px;
   }
 }
-.abit-form .styled-file-input {
-  margin-top: 8px;
-  padding: 8px;
-  background-color: #F5F5F5;
-  border-radius: 20px;
-  font-size: clamp(14px, 2vw, 20px);
-  cursor: pointer;
-  width: 100%;
-  box-sizing: border-box;
+@media (max-width: 460px) {
+  .video h1 {
+    font-size: 35px;
+  }
 }
-.abit-form .styled-file-input::file-selector-button {
-  padding: 10px 20px;
-  background: #FF5F00;
-  color: white;
-  border: none;
-  border-radius: 20px;
-  font-size: clamp(14px, 2vw, 20px);
-  font-weight: 500;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  margin-right: 15px;
-}
-.abit-form .styled-file-input::-webkit-file-upload-button {
-  padding: 10px 20px;
-  background: #FF5F00;
-  color: white;
-  border: none;
-  border-radius: 20px;
-  font-size: clamp(14px, 2vw, 20px);
-  font-weight: 500;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  margin-right: 15px;
+@media (max-width: 320px) {
+  .video h1 {
+    font-size: 30px;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
