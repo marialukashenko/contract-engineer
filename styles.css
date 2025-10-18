@@ -17,7 +17,6 @@ body {
   padding: 0;
   width: 100%;
   font-family: "Inter", sans-serif;
-  overflow-x: hidden;
 }
 
 @font-face {
@@ -666,9 +665,10 @@ section {
 .timeline .timeline-scroll::before {
   content: "";
   position: absolute;
-  top: 51.5%;
+  top: 51.7%;
   left: 0;
-  width: 100vw;
+  right: 0;
+  width: 5.4vw;
   height: 1px;
   background: white;
   opacity: 60%;
